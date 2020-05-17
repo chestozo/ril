@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html manifest="offline.appcache" >
+
+  <head>
+    <title>ril app</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- <meta name="apple-mobile-web-app-status-bar-style" content="black" /> -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="i/tldr.png" />
+    <link href="css/ionicons-2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+    <!-- styles injected here -->
+  <link href="css/style.css" rel="stylesheet"></head>
+
+  <body>
+    <!-- Version 0.11.68 -->
+    <script type="text/javascript">
+      window.RIL_VERSION = '0.11.68'
+      window.onerror = function(error_message, url, line_number, error_type) {
+  alert(error_message + ' [' + url + ':' + line_number + ']')
+}
+
+// Reload app once new version is ready.
+// @see https://developer.apple.com/library/archive/documentation/iPhone/Conceptual/SafariJSDatabaseGuide/OfflineApplicationCache/OfflineApplicationCache.html
+if (window.applicationCache) {
+  // Immediate cache swap after new version was downloaded.
+  window.applicationCache.addEventListener(
+    'updateready',
+    () => {
+      window.applicationCache.swapCache()
+    },
+    false
+  )
+}
+
+    </script>
+    <script type="text/javascript" src="https://yandex.st/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="vendor/lodash.js"></script>
+    <script type="text/javascript" src="vendor/quo.debug.js"></script>
+    <!-- scripts injected here -->
+  <script type="text/javascript" src="app.js"></script></body>
+
+  </html>

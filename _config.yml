@@ -1,0 +1,10 @@
+theme: jekyll-theme-cayman
+title: ril
+description: read more, whenever you can
+url: https://chestozo.github.io/ril/
+author: chestozo
+plugins:
+  - jekyll-seo-tag
+google_analytics: UA-167527274-1
+webmaster_verifications:
+  yandex: 80e5f6811abbb85d
