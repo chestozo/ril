@@ -972,14 +972,12 @@ iframe[src*="https://medium.com/media/"] {
   background-color: #2da92d;
   min-height: 1px;
   max-height: 3px;
+  margin-bottom: 1px;
 }
-.reading-stats .reading-stats_col .reading-stats_col_item + .reading-stats_col_item {
-  margin-top: 1px;
-}
-.reading-stats .reading-stats_col.reading-stats_col-has-reads {
+.reading-stats .reading-stats_col.reading-stats_col-has-reads .reading-stats_col_item {
   opacity: 0.75;
 }
 .reading-stats .reading-stats_col.reading-stats_is-weekend {
-  border-bottom-color: rgba(250,100,100,0.4);
+  border-bottom-color: rgba(250,100,100,0.6);
 }
 
