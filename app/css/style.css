@@ -964,7 +964,7 @@ iframe[src*="https://medium.com/media/"] {
   flex-shrink: 0;
   width: 10px;
   margin-right: 2px;
-  border-bottom: 1px solid rgba(0,0,0,0.2);
+  border-bottom: 1px solid rgba(100,100,250,0.2);
 }
 .reading-stats .reading-stats_col .reading-stats_col_item {
   flex-grow: 1;
@@ -978,5 +978,8 @@ iframe[src*="https://medium.com/media/"] {
 }
 .reading-stats .reading-stats_col.reading-stats_col-has-reads {
   opacity: 0.75;
+}
+.reading-stats .reading-stats_col.reading-stats_is-weekend {
+  border-bottom-color: rgba(250,100,100,0.4);
 }
 
