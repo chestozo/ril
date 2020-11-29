@@ -948,36 +948,4 @@ iframe[src*="https://medium.com/media/"] {
 .mode-article #article {
   transform: translate3d(0, 0, 0) scale(1);
 }
-.reading-stats {
-  display: flex;
-  position: relative;
-  height: 50px;
-  align-items: flex-end;
-  flex-direction: row-reverse;
-  overflow: hidden;
-}
-.reading-stats .reading-stats_col {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  flex-shrink: 0;
-  width: 10px;
-  margin-right: 2px;
-  border-bottom: 1px solid rgba(100,100,250,0.2);
-}
-.reading-stats .reading-stats_col .reading-stats_col_item {
-  flex-grow: 1;
-  width: 100%;
-  background-color: #2da92d;
-  min-height: 1px;
-  max-height: 3px;
-  margin-bottom: 1px;
-}
-.reading-stats .reading-stats_col.reading-stats_col-has-reads .reading-stats_col_item {
-  opacity: 0.75;
-}
-.reading-stats .reading-stats_col.reading-stats_is-weekend {
-  border-bottom-color: rgba(250,100,100,0.6);
-}
 
