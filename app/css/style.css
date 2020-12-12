@@ -363,30 +363,6 @@ iframe[src*="https://medium.com/media/"] {
 .theme-dark #main .settings_item-value {
   color: #777 !important;
 }
-#main .settings_item-input {
-  -webkit-appearance: none;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-  font: inherit;
-  outline: none;
-}
-@media (prefers-color-scheme: light) {
-  #main .settings_item-input {
-    border: 1px solid #555;
-  }
-}
-.theme-light #main .settings_item-input {
-  border: 1px solid #555 !important;
-}
-@media (prefers-color-scheme: dark) {
-  #main .settings_item-input {
-    border: 1px solid #777;
-  }
-}
-.theme-dark #main .settings_item-input {
-  border: 1px solid #777 !important;
-}
 #main .settings_item-controls {
   padding-top: 0.2em;
 }
@@ -461,30 +437,6 @@ iframe[src*="https://medium.com/media/"] {
 }
 .theme-dark #list .search-articles {
   border-bottom: 1px dotted #444648 !important;
-}
-#list .search-articles .search-box {
-  -webkit-appearance: none;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-  font: inherit;
-  outline: none;
-}
-@media (prefers-color-scheme: light) {
-  #list .search-articles .search-box {
-    border: 1px solid #555;
-  }
-}
-.theme-light #list .search-articles .search-box {
-  border: 1px solid #555 !important;
-}
-@media (prefers-color-scheme: dark) {
-  #list .search-articles .search-box {
-    border: 1px solid #777;
-  }
-}
-.theme-dark #list .search-articles .search-box {
-  border: 1px solid #777 !important;
 }
 #list .article {
   padding: 0.3em 0.5em;
@@ -684,19 +636,6 @@ iframe[src*="https://medium.com/media/"] {
   position: relative;
   font-size: 19px;
 }
-#article .article-inner {
-  position: relative;
-  min-height: calc(100% + 1px);
-  padding: 2%;
-  box-sizing: border-box;
-  font-size: inherit;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  word-wrap: break-word;
-  word-break: break-all;
-  word-break: break-word;
-  -webkit-hyphens: auto;
-  hyphens: auto;
-}
 #article h1,
 #article h2,
 #article h3,
@@ -833,93 +772,6 @@ iframe[src*="https://medium.com/media/"] {
 }
 .theme-dark #article img.centered {
   box-shadow: 0 0 0 4px #777 !important;
-}
-#article .article-links {
-  margin-top: 0.5em;
-  padding: 0.3em 0;
-  border-top-width: 1px;
-  border-bottom-width: 1px;
-  border-style: dotted;
-}
-@media (prefers-color-scheme: light) {
-  #article .article-links {
-    border-color: #d5d4d0;
-  }
-}
-.theme-light #article .article-links {
-  border-color: #d5d4d0 !important;
-}
-@media (prefers-color-scheme: dark) {
-  #article .article-links {
-    border-color: #444648;
-  }
-}
-.theme-dark #article .article-links {
-  border-color: #444648 !important;
-}
-#article .article-footer {
-  width: 100%;
-  margin-top: 0.5em;
-  margin-bottom: 200px;
-  text-align: center;
-  font-size: 240%;
-}
-@media (prefers-color-scheme: light) {
-  #article .article-footer {
-    color: #999;
-  }
-}
-.theme-light #article .article-footer {
-  color: #999 !important;
-}
-@media (prefers-color-scheme: dark) {
-  #article .article-footer {
-    color: #888;
-  }
-}
-.theme-dark #article .article-footer {
-  color: #888 !important;
-}
-.article-read-status {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 95%;
-  height: 2px;
-  display: block;
-  transition: 0.3s right;
-}
-@media (prefers-color-scheme: light) {
-  .article-read-status {
-    box-shadow: 0 0 5px #fff;
-  }
-}
-.theme-light .article-read-status {
-  box-shadow: 0 0 5px #fff !important;
-}
-@media (prefers-color-scheme: light) {
-  .article-read-status {
-    background-color: #ff0084;
-  }
-}
-.theme-light .article-read-status {
-  background-color: #ff0084 !important;
-}
-@media (prefers-color-scheme: dark) {
-  .article-read-status {
-    box-shadow: 0 0 5px #303234;
-  }
-}
-.theme-dark .article-read-status {
-  box-shadow: 0 0 5px #303234 !important;
-}
-@media (prefers-color-scheme: dark) {
-  .article-read-status {
-    background-color: #e55d9c;
-  }
-}
-.theme-dark .article-read-status {
-  background-color: #e55d9c !important;
 }
 .mode-main #main {
   transform: translate3d(0, 0, 0) scale(1);
