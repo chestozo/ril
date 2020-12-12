@@ -1,6 +1,6 @@
 CACHE MANIFEST
 
-# Version 0.11.73b
+# Version 0.11.74a
 
 CACHE:
 css/ionicons-2.0.1/css/ionicons.min.css
@@ -11,7 +11,6 @@ css/ionicons-2.0.1/fonts/ionicons.woff?v=2.0.0
 css/style.css
 i/icon.png
 i/tldr.png
-https://yandex.st/jquery/1.12.4/jquery.min.js
 vendor/lodash.js
 vendor/quo.debug.js
 app.js
