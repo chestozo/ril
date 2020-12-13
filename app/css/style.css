@@ -33,31 +33,6 @@ iframe[src*="https://www.youtube.com/embed/"] {
 iframe[src*="https://medium.com/media/"] {
   height: 3vh;
 }
-.icon {
-  position: relative;
-  top: 1px;
-  display: inline-block;
-  font-family: 'Ionicons';
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1;
-  font-size: 32px;
-  -webkit-font-smoothing: antialiased;
-  color: inherit;
-  user-select: none;
-  width: 32px;
-  height: 32px;
-  text-align: center;
-}
-.icon-switch-theme:before {
-  content: "\f313";
-}
-.icon-random:before {
-  content: "\f221";
-}
-.icon-sync:before {
-  content: "\f3b1";
-}
 .telegram-icon {
   margin: 0 0.3em;
 }
