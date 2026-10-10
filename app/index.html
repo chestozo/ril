@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html manifest="offline.appcache"  class="theme-dark">
+<html class="theme-dark">
 
   <head>
     <title>ril app</title>
@@ -35,24 +35,35 @@
   </head>
 
   <body>
-    <!-- Version 0.11.90a -->
+    <!-- Version 0.12.01a -->
     <script type="text/javascript">
-      window.RIL_VERSION = '0.11.90a'
+      window.RIL_VERSION = '0.12.01a'
       window.onerror = function(error_message, url, line_number, error_type) {
   alert(error_message + ' [' + url + ':' + line_number + ']')
 }
 
-// Reload app once new version is ready.
-// @see https://developer.apple.com/library/archive/documentation/iPhone/Conceptual/SafariJSDatabaseGuide/OfflineApplicationCache/OfflineApplicationCache.html
-if (window.applicationCache) {
-  // Immediate cache swap after new version was downloaded.
-  window.applicationCache.addEventListener(
-    'updateready',
-    () => {
-      window.applicationCache.swapCache()
-    },
-    false
-  )
+// Offline mode via Service Worker (replaces the deprecated Application Cache).
+// https is a safe production guard: dev server runs on http.
+// Path is relative, so it works when the app is served from a subpath (/ril/app/).
+// updateViaCache: 'none' - GitHub Pages serves everything with max-age=600,
+// otherwise sw.js updates could lag ~10 minutes behind a release.
+if ('serviceWorker' in navigator && window.location.protocol === 'https:') {
+  navigator.serviceWorker
+    .register('sw.js', { updateViaCache: 'none' })
+    .catch(function(error) {
+      console.warn('service worker registration failed', error)
+    })
+
+  // Reload app once a new version has taken control
+  // (mirrors the old applicationCache 'updateready' auto-swap).
+  if (navigator.serviceWorker.controller) {
+    var reloading = false
+    navigator.serviceWorker.addEventListener('controllerchange', function() {
+      if (reloading) return
+      reloading = true
+      window.location.reload()
+    })
+  }
 }
 
     </script>
