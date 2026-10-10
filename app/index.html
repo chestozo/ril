@@ -35,9 +35,9 @@
   </head>
 
   <body>
-    <!-- Version 0.12.01b -->
+    <!-- Version 0.12.01c -->
     <script type="text/javascript">
-      window.RIL_VERSION = '0.12.01b'
+      window.RIL_VERSION = '0.12.01c'
       window.onerror = function(error_message, url, line_number, error_type) {
   alert(error_message + ' [' + url + ':' + line_number + ']')
 }
@@ -45,11 +45,13 @@
 // Offline mode via Service Worker (replaces the deprecated Application Cache).
 // https is a safe production guard: dev server runs on http.
 // Path is relative, so it works when the app is served from a subpath (/ril/app/).
-// updateViaCache: 'none' - GitHub Pages serves everything with max-age=600,
-// otherwise sw.js updates could lag ~10 minutes behind a release.
+// The version query busts both the browser cache and the GitHub Pages CDN
+// (both cache sw.js for ~10 minutes, so an un-busted sw.js can lag a release).
+// NOTE: sw.js only differs between releases when package.json version is
+// bumped - same as the old appcache with its '# Version' comment.
 if ('serviceWorker' in navigator && window.location.protocol === 'https:') {
   navigator.serviceWorker
-    .register('sw.js', { updateViaCache: 'none' })
+    .register('sw.js?v=' + window.RIL_VERSION, { updateViaCache: 'none' })
     .catch(function(error) {
       console.warn('service worker registration failed', error)
     })
