@@ -5,7 +5,7 @@
 // All urls are relative and resolve against this file's location,
 // so the app works under any subpath (deployed at /ril/app/).
 
-const VERSION = '0.12.01d'
+const VERSION = '0.12.02a'
 const CACHE_NAME = 'ril-' + VERSION
 
 const PRECACHE_URLS = [
